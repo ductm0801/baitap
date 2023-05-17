@@ -1,38 +1,67 @@
 .App {
+  
+}
+#menu{
+  background-color: black;
+}
+#menu li {
+ 
+  display: inline-block;
+  background-color:black ;
+  
+  width: 120px;
+  height: 40px;
+  line-height: 40px;
+  
+  
+}
+#menu a {
+  text-decoration: none;
+  color:white ;
+  display: block;
+}
+#menu a:hover {
+ 
+  color: #333;
+}
+img {
+  width: 100%;
+  height: 100%;
+}
+.container {
+  display: grid;
+  margin: 0 auto;
   text-align: center;
+  
+  grid-template-columns: repeat(3, 33.3%);
+  justify-content:space-around;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+@media screen and (max-width:600px) {
+  .column {
+    width: 100%;
   }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.footer{
+  text-align: center;
+  background-color: rgb(163, 163, 13);
   color: white;
 }
-
-.App-link {
-  color: #61dafb;
+  .button {
+    background-color: black;
+    border: none;
+    color: white;
+    text-decoration: none;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.btn{
+  background-color: black;
+  padding: 5px;
+}
+.card{
+  background-color: rgb(235, 232, 232);
 }
