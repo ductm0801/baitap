@@ -13,7 +13,7 @@ export default function Player() {
                <img src={player.img}/>
                  <h3>{player.name}</h3>
                  <p className='title'>{player.club}</p>
-                 <p><button onClick={()=>{setPlayer(player)}}><a href='#popup1' id='openPopUp'>Detail</a></button></p>
+                 <p ><button className='btn' onClick={()=>{setPlayer(player)}}><a className='button' href='#popup1' id='openPopUp'>Detail</a></button></p>
                </div>
              </div>
             ))}

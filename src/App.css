@@ -1,36 +1,36 @@
-.App {
-  
+
+.topnav {
+  overflow: hidden;
+  margin-left: 10dp;
 }
-#menu{
-  background-color: black;
+
+/* Style the links inside the navigation bar */
+.topnav a {
+float: left;
+
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+font-size: 17px;
 }
-#menu li {
- 
-  display: inline-block;
-  background-color:black ;
-  
-  width: 120px;
-  height: 40px;
-  line-height: 40px;
-  
-  
+
+/* Change the color of links on hover */
+.topnav a:hover {
+background-color: #ddd;
+color: black;
 }
-#menu a {
-  text-decoration: none;
-  color:white ;
-  display: block;
-}
-#menu a:hover {
- 
-  color: #333;
+
+/* Add a color to the active/current link */
+.topnav a.active {
+background-color: #cde214;
+color: white;
 }
 img {
   width: 100%;
-  height: 100%;
+  height: 70%;
 }
 .container {
   display: grid;
-  margin: 0 auto;
   text-align: center;
   
   grid-template-columns: repeat(3, 33.3%);
@@ -47,10 +47,16 @@ img {
     width: 100%;
   }
 }
-.footer{
-  text-align: center;
-  background-color: rgb(163, 163, 13);
+.footer {
+  position: fixed;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: x-small;
+  background-color: #d8fc0b;
   color: white;
+  text-align: center;
+  
 }
   .button {
     background-color: black;
@@ -61,7 +67,58 @@ img {
 .btn{
   background-color: black;
   padding: 5px;
+ width: 100%;
 }
 .card{
   background-color: rgb(235, 232, 232);
+  width: 95%;
+  height: 105%;
 }
+.overlay {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.7);
+  transition: opacity 500ms;
+  visibility: hidden;
+  opacity: 0;
+}
+.overlay:target {
+  visibility: visible;
+  opacity: 1;
+}
+.popup {
+  margin: 70px auto;
+  padding: 5px;
+  background: #fff;
+  border-radius: 5px;
+  width: 30%;
+  position: relative;
+  transition: all 5s ease-in-out;
+}
+.popup img{ width: 100%;}
+.popup h2 {
+  margin-top: 0;
+  color: #333;
+  font-family: Tahoma, Arial, sans-serif;
+}
+.popup .close {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  transition: all 200ms;
+  font-size: 30px;
+  font-weight: bold;
+  text-decoration: none;
+  color: #333;
+}
+.popup .close:hover {color: #06D85F;}
+.popup .content {
+  max-height: 30%;
+  overflow: auto;
+}
+.switch-mode{
+  float: right;
+ }
