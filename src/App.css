@@ -1,40 +1,14 @@
 
-.topnav {
-  overflow: hidden;
-  margin-left: 10dp;
-}
-
-/* Style the links inside the navigation bar */
-.topnav a {
-float: left;
-
-text-align: center;
-padding: 14px 16px;
-text-decoration: none;
-font-size: 17px;
-}
-
-/* Change the color of links on hover */
-.topnav a:hover {
-background-color: #ddd;
-color: black;
-}
-
-/* Add a color to the active/current link */
-.topnav a.active {
-background-color: #cde214;
-color: white;
-}
 img {
   width: 100%;
   height: 70%;
 }
 .container {
-  display: grid;
   text-align: center;
-  
-  grid-template-columns: repeat(3, 33.3%);
   justify-content:space-around;
+}
+.card-content{
+  text-align: left;
 }
 
 .row:after {
@@ -52,28 +26,19 @@ img {
   left: 0;
   bottom: 0;
   width: 100%;
-  font-size: x-small;
   background-color: #d8fc0b;
   color: white;
   text-align: center;
+
   
 }
   .button {
-    background-color: black;
+    background-color: #fff;
     border: none;
-    color: white;
+    color: blue;
     text-decoration: none;
 }
-.btn{
-  background-color: black;
-  padding: 5px;
- width: 100%;
-}
-.card{
-  background-color: rgb(235, 232, 232);
-  width: 95%;
-  height: 105%;
-}
+
 .overlay {
   position: fixed;
   top: 0;
@@ -122,3 +87,67 @@ img {
 .switch-mode{
   float: right;
  }
+.badge{
+  display: block;
+  float: left;
+  margin-top: 2%;
+  background-color: red;
+  color: white;
+  text-transform: uppercase;
+  margin-right: 10dp;
+}
+.product-tumb{
+  float: inherit;
+  display: block;
+  margin-left: 1000dp;
+}
+.product-card{
+  align-items: center;
+  padding-top: 60px;
+  padding-bottom: 60px;
+  padding-left: 50px;
+  padding-right: 10%;
+  overflow-wrap: break-word;
+  margin: 0 auto;
+  width: 70%;
+  height: 100%;
+  
+}
+.containers img{
+  display: block;
+  margin-left:15%;
+  margin-right: auto;
+  width: 50%;
+  width: 30%;
+  height: 60%;
+  margin-left: 30dp;
+ 
+}
+.pbackground{
+  background-color: lightgray;
+  
+} 
+.product-details{
+  margin-left:2%;
+  background-color: white;
+  
+}
+.product-details h4{
+  color: black;
+  text-transform: uppercase;
+}
+.product-price{
+  color: orange;
+  font-weight: 400;
+  font-size: larger;
+}
+.modal-show {
+  background-color: rgba(0, 0, 0, 0.2);
+  width: 100vw;
+  height: 100vmax;
+  z-index: 99;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
