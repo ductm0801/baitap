@@ -2,8 +2,8 @@ import React from 'react';
 import { useParams } from 'react-router-dom'
 import { data } from '../shared/ListOfPlayers'
 import { useState } from 'react';
-import { Icon } from 'react-materialize';
 import ModalCase from './ModalCase';
+import {Icon,Card,CardPanel,Container,CardTitle, Button} from 'react-materialize';
 export default function Detail() {
 
     const [isOpen, setIsOpen] = useState(false);
@@ -19,31 +19,35 @@ export default function Detail() {
     let cost = player.cost.toLocaleString()
 
     return (
-        <div className='containers'>
-            <a onClick={() => setIsOpen(true)} className="btn-floating halfway-fab waves-effect waves-light red">
+        <Container >
+            <Button floating onClick={() => setIsOpen(true)} className="btn-floating halfway-fab waves-effect waves-light red">
                 <Icon>ondemand_video</Icon>
-            </a>
+            </Button>
             {isOpen && <ModalCase setIsOpen={setIsOpen} player={player} />}
-            <div className='product-card'>
-                <div className='pbackground'>
-                    <div className='badge'>{player.name}</div>
+            <Card>
+                    
                     <div className='product-tumb'>
                         <img src={`../${player.img}`} alt='' />
 
                     </div>
-                </div>
-                <div className='product-details'>
-                    <h4>{player.club}</h4>
-                    <div className='product-price'>Market value: € {cost}</div>
-                    <p>{player.info}</p>
+                    <CardTitle>{player.name}</CardTitle>
+            
+                    <CardPanel className='teal'>
+                    <strong className="white-text" >
+                               
+                    <h4>{player.club}</h4> 
+                
+                   <h4> Market value: € {cost}</h4> 
+                    <span class="flow-text">
+                    {player.info}
+                    </span>
+                    </strong>     
+                </CardPanel>
+                
 
-                    <div className='product-bottom-details'></div>
+            </Card>
 
-                </div>
-
-            </div>
-
-        </div>
+        </Container>
 
     )
 }
